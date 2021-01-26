@@ -1,0 +1,3 @@
+This repository presents the MUT modeling in Revit file, and MUT IFC extension in Express language in 2 files of MUTElement.exp for physical elements and MUTSpatial.exp for spatial element.
+
+The folder of 'Picture' includes images of IFC MUT partial extension, new families of MUT and part of MUT modeled in Revit.

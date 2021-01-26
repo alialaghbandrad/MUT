@@ -1,0 +1,37 @@
+SCHEMA IfcMUT;
+
+ENTITY IfcFacility
+	ABSTRACT SUPERTYPE OF	(ONEOF(IfcTunnel, IfcBridge, IfcBuilding, IfcMarineFacility, IfcRailway, IfcRoad))
+	SUBTYPE OF (IfcSpatialStructureElement);
+END_ENTITY;
+
+Entity IfcTunnel
+	ABSTRACT SUPERTYPE OF	(IfcMUT)
+	SUBTYPE OF (IfcFacility);
+END_ENTITY;
+
+Entity IfcMUT
+	SUBTYPE OF (IfcTunnel);
+END_ENTITY;
+
+Entity IfcBridge
+	SUBTYPE OF (IfcFacility);
+END_ENTITY;
+
+Entity IfcBuilding
+	SUBTYPE OF (IfcFacility);
+END_ENTITY;
+
+Entity IfcMarineFacility
+	SUBTYPE OF (IfcFacility);
+END_ENTITY;
+
+Entity IfcRailway
+	SUBTYPE OF (IfcFacility);
+END_ENTITY;
+
+Entity IfcRoad
+	SUBTYPE OF (IfcFacility);
+END_ENTITY;
+
+END_SCHEMA;

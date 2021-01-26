@@ -1,0 +1,107 @@
+SCHEMA IfcMUTElement;
+
+ENTITY IfcElement
+	ABSTRACT SUPERTYPE OF	(ONEOF(IfcMUTElement, IfcBuiltElement, IfcCivilElement, IfcDistributionElement, IfcElementAssembly, IfcElementComponent, IfcFeatureElement, IfcFurnishingElement, IfcGeographicElement, IfcGeotechnicalElement, IfcTransportElement, IfcVirtualElement));
+	SUBTYPE OF (IfcProduct);
+END_ENTITY;
+
+ENTITY IfcMUTElement
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY IfcMUTStructureElement
+	ABSTRACT SUPERTYPE OF (ONEOF (IfcMUTCulvertStructure, IfcMUTFoundation, IfcMUTFoundationPit, IfcMUTAuxiliaryStructureElement));
+	SUBTYPE OF (IfcMUTElement);
+END_ENTITY;
+
+ENTITY IfcMUTCulvertStructure
+	SUBTYPE OF (IfcMUTElement);
+END_ENTITY;
+
+ENTITY IfcMUTFoundation
+	SUBTYPE OF (IfcMUTElement);
+END_ENTITY;
+
+ENTITY IfcMUTFoundationPit
+	SUBTYPE OF (IfcMUTElement);
+END_ENTITY;
+
+ENTITY IfcMUTAuxiliaryStructureElement
+	ABSTRACT SUPERTYPE OF (ONEOF (IfcMUTAccessStructureElement, IfcMUTNodeStructure, IfcMUTLateralStructure, IfcMUTWaterproofingDrainage));
+	SUBTYPE OF (IfcMUTStructureElement);
+END_ENTITY;
+
+ENTITY IfcMUTAccessStructureElement
+	ABSTRACT SUPERTYPE OF (ONEOF (IfcMUTVentilationStructure, IfcMUTMaterialPortStructure, IfcMUTHumanAccessStructure));
+	SUBTYPE OF (IfcMUTAuxiliaryStructureElement);
+END_ENTITY;
+
+ENTITY IfcMUTVentilationStructure
+	SUBTYPE OF (IfcMUTAccessStructureElement);
+END_ENTITY;
+
+ENTITY IfcMUTMaterialPortStructure
+	SUBTYPE OF (IfcMUTAccessStructureElement);
+END_ENTITY;
+
+ENTITY IfcMUTHumanAccessStructure
+	SUBTYPE OF (IfcMUTAccessStructureElement);
+END_ENTITY;
+
+ENTITY IfcMUTNodeStructure
+	SUBTYPE OF (IfcMUTAuxiliaryStructureElement);
+END_ENTITY;
+
+ENTITY IfcMUTLateralStructure
+	SUBTYPE OF (IfcMUTAuxiliaryStructureElement);
+END_ENTITY;
+
+ENTITY IfcMUTWaterproofingDrainage
+	SUBTYPE OF (IfcMUTAuxiliaryStructureElement);
+END_ENTITY;
+
+ENTITY IfcBuiltElement
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY IfcCivilElement
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY IfcDistributionElement
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY IfcElementAssembly
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY IfcElementComponent
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY fcFeatureElement
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY IfcFurnishingElement
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY IfcGeographicElement
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY IfcGeotechnicalElement
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY IfcTransportElement
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+ENTITY IfcVirtualElement
+	SUBTYPE OF (IfcElement);
+END_ENTITY;
+
+END_SCHEMA;
